@@ -10,7 +10,7 @@ const changeLogin = () => {
 
 export const login = (account, password) => {
   return (dispatch) => {
-    axios.get('http://localhost:8080/api/login.json?account=' + account + '&password=' + password).then(res => {
+    axios.get('/api/login.json?account=' + account + '&password=' + password).then(res => {
       const result = res.data.data;
       if (result) {
         dispatch(changeLogin())

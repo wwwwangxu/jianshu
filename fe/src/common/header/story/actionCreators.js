@@ -17,7 +17,7 @@ export const searchBlur = () => ({
 
 export const getList = () => {
   return (dispatch) => {
-    axios.get('http://localhost:8080/api/headerlist.json').then((res) => {
+    axios.get('/api/headerlist.json').then((res) => {
       const data = res.data;
       dispatch(changeList(data.data))
     }).catch(() => {
